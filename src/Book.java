@@ -1,3 +1,8 @@
+/**
+ * Represents a book in the library management system.
+ * Tracks basic details and availability status for borrowing.
+ */
+
 public class Book {
     private String title;
     private String author;
