@@ -18,10 +18,12 @@ public class Book {
         this.isbn = isbn;
         this.isAvailable = true;
     }
-    public void borrow() {
-        this.isAvailable = false;
+  public void borrow() {
+    if (!this.isAvailable) {
+        throw new IllegalStateException("Book is already borrowed");
     }
-
+    this.isAvailable = false;
+}
     public void returnBook() {
         this.isAvailable = true;
     }
