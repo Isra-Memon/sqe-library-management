@@ -4,13 +4,15 @@ public class Book {
     private String isbn;
     private boolean isAvailable;
 
-    public Book(String title, String author, String isbn) {
+       public Book(String title, String author, String isbn) {
+        if (title == null || title.isEmpty()) {
+            throw new IllegalArgumentException("Title cannot be empty");
+        }
         this.title = title;
         this.author = author;
         this.isbn = isbn;
         this.isAvailable = true;
     }
-
     public void borrow() {
         this.isAvailable = false;
     }
