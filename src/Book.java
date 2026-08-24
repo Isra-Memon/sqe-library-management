@@ -6,16 +6,16 @@
 public class Book {
     private String title;
     private String author;
-    private String isbn;
+    private String bookId;
     private boolean isAvailable;
 
-       public Book(String title, String author, String isbn) {
+       public Book(String title, String author, String bookId) {
         if (title == null || title.isEmpty()) {
             throw new IllegalArgumentException("Title cannot be empty");
         }
         this.title = title;
         this.author = author;
-        this.isbn = isbn;
+        this.bookId = bookId;
         this.isAvailable = true;
     }
   public void borrow() {
