@@ -2,14 +2,12 @@
  * Represents a book in the library management system.
  * Tracks basic details and availability status for borrowing.
  */
-
 public class Book {
     private String title;
     private String author;
     private String bookId;
     private boolean isAvailable;
-
-       public Book(String title, String author, String bookId) {
+    public Book(String title, String author, String bookId) {
         if (title == null || title.isEmpty()) {
             throw new IllegalArgumentException("Title cannot be empty");
         }
@@ -27,11 +25,9 @@ public class Book {
     public void returnBook() {
         this.isAvailable = true;
     }
-
     public boolean isAvailable() {
         return isAvailable;
     }
-
     public String getTitle() {
         return title;
     }
