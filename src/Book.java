@@ -2,6 +2,7 @@
  * Represents a book in the library management system.
  * Tracks basic details and availability status for borrowing.
  */
+// Version 1.1 - added borrow validation 
 public class Book {
     private String title;
     private String author;
@@ -31,4 +32,5 @@ public class Book {
     public String getTitle() {
         return title;
     }
+// TODO: add unit tests for borrow/returns 
 }
